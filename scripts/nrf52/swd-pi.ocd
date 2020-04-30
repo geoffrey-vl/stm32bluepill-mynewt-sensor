@@ -56,6 +56,11 @@ bcm2835gpio_speed_coeffs 236181 60
 # SWD Configuration
 
 # Assign each SWD line (SWCLK, SWDIO) to a Pi GPIO: (See https://pinout.xyz/ for Pi Header Pin Number to GPIO mapping)
+# For Pi 1 a/b with 26 pin GPIO header
+# Connect Pi Header Pin Number 23 (GPIO 11) to nRF52 SWCLK (Yellow wire)
+# Connect Pi Header Pin Number 19 (GPIO 10) to nRF52 SWDIO (Green wire)
+# bcm2835gpio_swd_nums 11 10
+# For all other Pi with 40pin GPIO header
 # Connect Pi Header Pin Number 38 (GPIO 20) to nRF52 SWCLK (Yellow wire)
 # Connect Pi Header Pin Number 40 (GPIO 21) to nRF52 SWDIO (Green wire)
 bcm2835gpio_swd_nums 20 21
